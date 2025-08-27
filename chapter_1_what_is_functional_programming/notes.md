@@ -1,4 +1,4 @@
-# Chapter 1 - What is Functional Programming
+# Chapter 1 - What is Functional Programming?
 
 
 * We should aim to remove side effects from our programs
