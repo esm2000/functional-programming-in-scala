@@ -1,0 +1,52 @@
+# SBT
+.scala-build/
+.bsp/
+.idea/
+.metals/
+.vscode/
+.DS_Store
+.classpath
+.project
+.settings/
+.cache/
+.history/
+.mill/
+.sbt_cache/
+.scala_dependencies
+.scala_history
+.scala_repl_history
+.scala_workspace
+.session/
+.target/
+logs/
+target/
+project/target/
+project/project/
+out/
+tmp/
+dist/
+build/
+bin/
+lib/
+src/main/resources/application.conf.local
+src/main/resources/application.properties.local
+src/test/resources/test.conf.local
+src/test/resources/test.properties.local
+
+# IntelliJ IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
+.idea_modules/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# OS generated files
+.DS_Store
+.Trashes
+ehthumbs.db
+Thumbs.db
