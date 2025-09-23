@@ -1,13 +1,13 @@
 object Exercise_2_1 {
     def fib(n: Int): Int = {
         @annotation.tailrec
-        def go(itr: Int, curr: Int, prev: Int, limit:Int): Int = {
-            if (limit == 1) 0
-            else if (itr == limit-1) curr
-            else go(itr+1, curr+prev, curr, limit)
+        def go(itr: Int, curr: Int, prev: Int): Int = {
+            if (n == 1) 0
+            else if (itr == n-1) curr
+            else go(itr+1, curr+prev, curr)
         }
         if (n <= 0) throw new Exception("n must be greater than 0")
-        go(1, 1, 0, n)
+        go(1, 1, 0)
     }
 
     def main(args: Array[String]): Unit = {
