@@ -15,3 +15,24 @@
 * When data is immutable, to write functions that add or remove elements from a list, we simply add or remove an element and return a new list. Since lists are immutable we don't need to copy the original list; we can just reuse it. This is called *data sharing* (where the input object and output object share the same data in memory but with distinct references).
     - Sharing of immutable data often lets us implement functions more efficiently; we can always return immutable data structures without having to worry about subsequent code modifying our data.
 * To achieve recursion over a list, `foldRight()` is often the best, most functional way to do so.
+* `List` is just one example of what's called an *algebraic data type (ADT)*. An ADT is just a data type defined by one or more data constuctors, each of which may contain zero or more arguments.
+* Tuples are algebraic data types but have special syntax:
+```
+scala> val p = ("Bob", 42)
+p: (java.lang.String, Int) = (Bob,42)
+
+scala> p._1
+res0: java.lang.String = Bob
+
+scala> p._2
+res1: Int = 42
+
+scala> p match { case (a,b) => b }
+res2: Int = 42
+```
+* Algebraic data types can be used to define other data structures like the binary tree data structure. 
+```
+sealed trait Tree[+A]
+case class Leaf[A](value: A) extends Tree[A]
+case class Branch[A](left: Tree[A], right: Tree[A]) extends Tree[A]
+```
