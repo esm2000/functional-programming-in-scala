@@ -12,13 +12,13 @@ case object None extends Option[Nothing]
 object Exercise_4_2 {
 
     def variance(xs: Seq[Double]): Option[Double] = {
-    def mean(xs: Seq[Double]): Option[Double] = {
-        val sum = xs.foldRight(0.0)(_ + _)
-        val count = xs.length
-        if (count == 0) None else Some(sum / count)
-    }
+        def mean(xs: Seq[Double]): Option[Double] = {
+            val sum = xs.foldRight(0.0)(_ + _)
+            val count = xs.length
+            if (count == 0) None else Some(sum / count)
+        }
 
-    mean(xs).flatMap(m => mean(xs.map(x => math.pow(x - m, 2))))
+        mean(xs).flatMap(m => mean(xs.map(x => math.pow(x - m, 2))))
 }
 
     def main(args: Array[String]): Unit = {

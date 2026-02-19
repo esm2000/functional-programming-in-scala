@@ -4,10 +4,10 @@ case object None extends Option[Nothing]
 
 object Exercise_4_3 {
     def map2[A,B,C](a: Option[A], b: Option[B])(f: (A, B) => C): Option[C] =
-    (a, b) match {
-        case (Some(x), Some(y)) => Some(f(x, y))
-        case _ => None
-    }
+        (a, b) match {
+            case (Some(x), Some(y)) => Some(f(x, y))
+            case _ => None
+        }
 
     def main(args: Array[String]): Unit = {
         println(map2(Some(3), Some(4))(_ + _)) // Some(7)
