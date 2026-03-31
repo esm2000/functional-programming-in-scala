@@ -58,3 +58,14 @@ def mean(xs: IndexedSeq[Double]): Either[String, Double] =
   else
     Right(xs.sum / xs.length)
 ```
+
+_____
+
+covariant: B <: A => List[B] <: List[A]
+   - if cat(B) is an animal(A), then a list of cats is a list of Animals
+
+contravariant: B <: A => Serializer[A] <: Serializer[B]
+  - if I have a serialize of animals(A), it also serializes any type of animal (cat in this cause whcih stands for B)
+
+https://docs.scala-lang.org/tour/variances.html
+Chapter 3's introduction includes a modal on variance as well.
